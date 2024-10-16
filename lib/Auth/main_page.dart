@@ -85,6 +85,36 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text('FontAI'),
+          ),
+        ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+        child: ElevatedButton(
+          style: const ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(
+            Color(0xFFF6C00A),
+          )),
+          onPressed: () {},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            child: Text(
+              'Get Started',
+              style: GoogleFonts.roboto(
+                fontSize: 18.0,
+                fontWeight: FontWeight.w800,
+                color: const Color.fromRGBO(255, 255, 255, 1),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
