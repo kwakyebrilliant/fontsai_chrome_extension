@@ -10,6 +10,18 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("FontAI"),
+            Icon(
+              Icons.toggle_on_outlined,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
