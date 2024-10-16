@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fontai_chrome_extension/Theme/theme_notifier.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -8,8 +11,31 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  bool isSwitched = false;
+  bool isDarkMode = false;
+
+  @override
+  void initState() {
+    super.initState();
+    loadSwitchState();
+  }
+
+  void loadSwitchState() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      isDarkMode = prefs.getBool('isDarkMode') ?? false;
+    });
+  }
+
+  void saveSwitchState() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    // Save the switch state
+    prefs.setBool('isDarkMode', isDarkMode);
+  }
+
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
@@ -20,8 +46,17 @@ class _MainPageState extends State<MainPage> {
             Text(
               "FontAI",
             ),
-            Icon(
-              Icons.toggle_on_outlined,
+            Switch(
+              activeTrackColor: Theme.of(context).colorScheme.inversePrimary,
+              value: isDarkMode,
+              onChanged: (value) {
+                setState(() {
+                  isDarkMode = value;
+                  // Save the switch state when it changes
+                  saveSwitchState();
+                  themeNotifier.toggleTheme();
+                });
+              },
             ),
           ],
         ),
