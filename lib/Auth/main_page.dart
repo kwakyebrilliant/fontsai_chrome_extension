@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fontai_chrome_extension/Theme/theme_notifier.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -43,8 +44,27 @@ class _MainPageState extends State<MainPage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "FontAI",
+            RichText(
+              text: TextSpan(
+                children: <TextSpan>[
+                  TextSpan(
+                    text: 'Font',
+                    style: GoogleFonts.roboto(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w800,
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'ai',
+                    style: GoogleFonts.inter(
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.w800,
+                      color: const Color(0xFFF6C00A),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Transform.scale(
               scale: 0.5,
