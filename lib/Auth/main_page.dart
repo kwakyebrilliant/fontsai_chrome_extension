@@ -46,17 +46,20 @@ class _MainPageState extends State<MainPage> {
             Text(
               "FontAI",
             ),
-            Switch(
-              activeTrackColor: Theme.of(context).colorScheme.inversePrimary,
-              value: isDarkMode,
-              onChanged: (value) {
-                setState(() {
-                  isDarkMode = value;
-                  // Save the switch state when it changes
-                  saveSwitchState();
-                  themeNotifier.toggleTheme();
-                });
-              },
+            Transform.scale(
+              scale: 0.5,
+              child: Switch(
+                activeTrackColor: Theme.of(context).colorScheme.inversePrimary,
+                value: isDarkMode,
+                onChanged: (value) {
+                  setState(() {
+                    isDarkMode = value;
+                    // Save the switch state when it changes
+                    saveSwitchState();
+                    themeNotifier.toggleTheme();
+                  });
+                },
+              ),
             ),
           ],
         ),
