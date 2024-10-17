@@ -128,7 +128,11 @@ class _MainPageState extends State<MainPage> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 8.0,
+                ),
                 Text(
+                  textAlign: TextAlign.center,
                   "simply dummy text of the printing and typesetting industry. Lorem Ipsum \n simply dummy text of the printing and typesetting industry.",
                   style: GoogleFonts.inter(
                     fontSize: 14,
