@@ -128,6 +128,14 @@ class _MainPageState extends State<MainPage> {
                     ],
                   ),
                 ),
+                Text(
+                  "simply dummy text of the printing and typesetting industry. Lorem Ipsum \n simply dummy text of the printing and typesetting industry.",
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: Theme.of(context).colorScheme.tertiary,
+                  ),
+                ),
               ],
             ),
           ),
