@@ -9,7 +9,7 @@ ThemeData lightMode = ThemeData(
     tertiaryContainer: Color.fromRGBO(247, 247, 255, 1),
     primary: Color.fromRGBO(0, 0, 0, 1),
     secondary: Color.fromRGBO(233, 233, 240, 1),
-    tertiary: Color.fromRGBO(233, 233, 233, 1),
+    tertiary: Color.fromRGBO(117, 117, 117, 1),
     inversePrimary: Color.fromRGBO(0, 0, 0, 1),
   ),
   textTheme: ThemeData.light().textTheme.apply(
