@@ -45,27 +45,47 @@ class _MainPageState extends State<MainPage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RichText(
-              text: TextSpan(
-                children: <TextSpan>[
-                  TextSpan(
-                    text: 'Font',
-                    style: GoogleFonts.roboto(
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.w800,
-                      color: Theme.of(context).colorScheme.inversePrimary,
+            Row(
+              children: [
+                Container(
+                  height: 30.0,
+                  width: 30.0,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      // Background image here
+                      image: AssetImage(
+                        "assets/images/logo.png",
+                      ),
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  TextSpan(
-                    text: 'ai',
-                    style: GoogleFonts.inter(
-                      fontSize: 28.0,
-                      fontWeight: FontWeight.w800,
-                      color: const Color(0xFFF6C00A),
-                    ),
+                ),
+                SizedBox(
+                  width: 3.0,
+                ),
+                RichText(
+                  text: TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Font',
+                        style: GoogleFonts.roboto(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.w800,
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'ai',
+                        style: GoogleFonts.inter(
+                          fontSize: 28.0,
+                          fontWeight: FontWeight.w800,
+                          color: const Color(0xFFF6C00A),
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Transform.scale(
               scale: 0.5,
