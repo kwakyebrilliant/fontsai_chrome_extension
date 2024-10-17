@@ -89,8 +89,47 @@ class _MainPageState extends State<MainPage> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: Text('FontAI'),
+          Expanded(
+            child: Center(
+              child: Text('FontAI'),
+            ),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                RichText(
+                  text: TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Welcome to ',
+                        style: GoogleFonts.roboto(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'Font',
+                        style: GoogleFonts.roboto(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w800,
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'ai',
+                        style: GoogleFonts.inter(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.w800,
+                          color: const Color(0xFFF6C00A),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
