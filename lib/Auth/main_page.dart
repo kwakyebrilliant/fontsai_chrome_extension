@@ -103,11 +103,11 @@ class _MainPageState extends State<MainPage> {
           )),
           onPressed: () {},
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10.0),
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Text(
               'Get Started',
               style: GoogleFonts.roboto(
-                fontSize: 18.0,
+                fontSize: 16.0,
                 fontWeight: FontWeight.w800,
                 color: const Color.fromRGBO(255, 255, 255, 1),
               ),
