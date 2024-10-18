@@ -180,27 +180,31 @@ class _MainPageState extends State<MainPage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Divider(
-            thickness: 1,
+            height: 1.0,
+            thickness: 1.0,
             color: Theme.of(context).colorScheme.primaryContainer,
           ),
           Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
-            child: ElevatedButton(
-              style: const ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(
-                  Color(0xFFD47CC3),
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    const Color(0xFFD47CC3),
+                  ),
                 ),
-              ),
-              onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8.0),
-                child: Text(
-                  'Get Started',
-                  style: GoogleFonts.roboto(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w800,
-                    color: const Color.fromRGBO(255, 255, 255, 1),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Text(
+                    'Get Started',
+                    style: GoogleFonts.roboto(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w800,
+                      color: const Color.fromRGBO(255, 255, 255, 1),
+                    ),
                   ),
                 ),
               ),
