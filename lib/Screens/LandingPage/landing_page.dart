@@ -13,6 +13,7 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  // Variables
   bool isSwitched = false;
   bool isDarkMode = false;
 
@@ -22,6 +23,7 @@ class _LandingPageState extends State<LandingPage> {
     loadSwitchState();
   }
 
+  // Laods user's theme from sharedpreferences
   void loadSwitchState() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -29,6 +31,7 @@ class _LandingPageState extends State<LandingPage> {
     });
   }
 
+  // Saves user's theme to sharedpreferences
   void saveSwitchState() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     // Save the switch state
@@ -45,11 +48,15 @@ class _LandingPageState extends State<LandingPage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         elevation: 0,
+
+        // Row for title
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            // Row for logo and title text
             Row(
               children: [
+                // log container
                 Container(
                   height: 30.0,
                   width: 30.0,
@@ -63,9 +70,12 @@ class _LandingPageState extends State<LandingPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+
+                const SizedBox(
                   width: 3.0,
                 ),
+
+                // Title RichText
                 RichText(
                   text: TextSpan(
                     children: <TextSpan>[
@@ -90,14 +100,19 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ],
             ),
+
+            // Transform around switch for toggling the theme
             Transform.scale(
               scale: 0.5,
+
+              // Switch for theme
               child: Switch(
                 activeTrackColor: Theme.of(context).colorScheme.inversePrimary,
                 value: isDarkMode,
                 onChanged: (value) {
                   setState(() {
                     isDarkMode = value;
+
                     // Save the switch state when it changes
                     saveSwitchState();
                     themeNotifier.toggleTheme();
@@ -108,6 +123,8 @@ class _LandingPageState extends State<LandingPage> {
           ],
         ),
       ),
+      // AppBar ends here
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
