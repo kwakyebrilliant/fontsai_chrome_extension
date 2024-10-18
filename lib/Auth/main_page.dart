@@ -39,6 +39,8 @@ class _MainPageState extends State<MainPage> {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+
+      // Appbar starts here
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         elevation: 0,
