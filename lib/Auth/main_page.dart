@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fontai_chrome_extension/Screens/LandingPage/information_page.dart';
 import 'package:fontai_chrome_extension/Theme/theme_notifier.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -196,13 +195,7 @@ class _MainPageState extends State<MainPage> {
                     const Color(0xFFD47CC3),
                   ),
                 ),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const InformationPage(),
-                    ),
-                  );
-                },
+                onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Text(
