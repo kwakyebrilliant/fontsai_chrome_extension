@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class InformationPage extends StatefulWidget {
-  const InformationPage({super.key});
+  final VoidCallback showLandingPage;
+  const InformationPage({super.key, required this.showLandingPage});
 
   @override
   State<InformationPage> createState() => _InformationPageState();
