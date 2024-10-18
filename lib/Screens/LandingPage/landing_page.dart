@@ -196,7 +196,7 @@ class _LandingPageState extends State<LandingPage> {
                     const Color(0xFFD47CC3),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: widget.showInformationPage,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Text(
