@@ -13,6 +13,26 @@ class _InformationPageState extends State<InformationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+      body: Stack(
+        children: [
+          Positioned(
+            top: 20.0,
+            left: 15.0,
+            right: 15.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GestureDetector(
+                  onTap: widget.showLandingPage,
+                  child: const Icon(
+                    Icons.arrow_back,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
