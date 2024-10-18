@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InformationPage extends StatefulWidget {
   final VoidCallback showLandingPage;
@@ -26,6 +27,34 @@ class _InformationPageState extends State<InformationPage> {
                   onTap: widget.showLandingPage,
                   child: const Icon(
                     Icons.arrow_back,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.inter(
+                        height: 1.1,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Provide \n',
+                          style: GoogleFonts.inter(
+                            fontSize: 36.0,
+                            fontWeight: FontWeight.w800,
+                            color: Theme.of(context).colorScheme.inversePrimary,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Your Details \n',
+                          style: GoogleFonts.inter(
+                            fontSize: 36.0,
+                            fontWeight: FontWeight.w800,
+                            color: Theme.of(context).colorScheme.inversePrimary,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
