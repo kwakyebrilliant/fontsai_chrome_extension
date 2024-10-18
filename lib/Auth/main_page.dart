@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fontai_chrome_extension/Screens/information_page.dart';
+import 'package:fontai_chrome_extension/Screens/LandingPage/information_page.dart';
 import 'package:fontai_chrome_extension/Theme/theme_notifier.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
