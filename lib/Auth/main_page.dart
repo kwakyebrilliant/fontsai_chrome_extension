@@ -69,7 +69,7 @@ class _MainPageState extends State<MainPage> {
                   text: TextSpan(
                     children: <TextSpan>[
                       TextSpan(
-                        text: 'Font',
+                        text: 'Tefont',
                         style: GoogleFonts.roboto(
                           fontSize: 24.0,
                           fontWeight: FontWeight.w800,
@@ -81,7 +81,7 @@ class _MainPageState extends State<MainPage> {
                         style: GoogleFonts.inter(
                           fontSize: 28.0,
                           fontWeight: FontWeight.w800,
-                          color: const Color(0xFFF6C00A),
+                          color: const Color(0xFFD47CC3),
                         ),
                       ),
                     ],
@@ -108,59 +108,68 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Expanded(
-            child: Center(
-              child: Text('FontAI'),
+            flex: 2,
+            child: Image(
+              image: AssetImage("assets/images/design.png"),
+              fit: BoxFit.cover,
             ),
           ),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RichText(
-                  text: TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Welcome to ',
-                        style: GoogleFonts.roboto(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.inversePrimary,
-                        ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    RichText(
+                      text: TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'Welcome to ',
+                            style: GoogleFonts.roboto(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color:
+                                  Theme.of(context).colorScheme.inversePrimary,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Tefont',
+                            style: GoogleFonts.roboto(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w800,
+                              color:
+                                  Theme.of(context).colorScheme.inversePrimary,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'ai',
+                            style: GoogleFonts.inter(
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.w800,
+                              color: const Color(0xFFD47CC3),
+                            ),
+                          ),
+                        ],
                       ),
-                      TextSpan(
-                        text: 'Font',
-                        style: GoogleFonts.roboto(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w800,
-                          color: Theme.of(context).colorScheme.inversePrimary,
-                        ),
+                    ),
+                    SizedBox(
+                      height: 3.0,
+                    ),
+                    Text(
+                      textAlign: TextAlign.center,
+                      "simply dummy text of the printing \n simply dummy text.",
+                      style: GoogleFonts.inter(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: Theme.of(context).colorScheme.tertiary,
                       ),
-                      TextSpan(
-                        text: 'ai',
-                        style: GoogleFonts.inter(
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.w800,
-                          color: const Color(0xFFF6C00A),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 3.0,
-                ),
-                Text(
-                  textAlign: TextAlign.center,
-                  "simply dummy text of the printing \n simply dummy text.",
-                  style: GoogleFonts.inter(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Theme.of(context).colorScheme.tertiary,
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -172,7 +181,7 @@ class _MainPageState extends State<MainPage> {
         child: ElevatedButton(
           style: const ButtonStyle(
               backgroundColor: WidgetStatePropertyAll(
-            Color(0xFFF6C00A),
+            Color(0xFFD47CC3),
           )),
           onPressed: () {},
           child: Padding(
