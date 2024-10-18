@@ -129,7 +129,7 @@ class _LandingPageState extends State<LandingPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Expanded(
+          const Expanded(
             flex: 2,
             child: Image(
               image: AssetImage("assets/images/design.png"),
